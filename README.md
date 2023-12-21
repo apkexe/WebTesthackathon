@@ -5,6 +5,6 @@ We tested the UI of a dummy [website](https://rahulshettyacademy.com/seleniumPra
 
 The team is:  
 - apkexe
-- themis123
-- KonstantinosKrantas
-- WokeToThis
+- [themis123](https://github.com/themis1234)
+- [KonstantinosKrantas](https://github.com/KonstantinosKrantas)
+- [WokeToThis](https://github.com/WokeToThis)

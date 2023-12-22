@@ -1,7 +1,7 @@
 {
   "name": "hackathon",
   "version": "1.0.0",
-  "description": "",
+  "description": "Repository created for Software Engineering 2 WebTest Christmas Hackathon.\r We tested the UI of a dummy [website](https://rahulshettyacademy.com/seleniumPractise/#/)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

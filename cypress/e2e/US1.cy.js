@@ -62,47 +62,15 @@ describe('template spec', () => {
 
     //this is for product price
     cy.get(`.product:nth-child(20) .product-price`).then(($product) =>{
-      const text = $product.text();
-      cy.get(`.cart-items .cart-item .product-info .product-price`).should('contain', text);
+
+      const price = parseInt($product.text());
+      const price1 = price*3;
+      // const text = $product.text();
+      cy.get(`.cart-items .cart-item .amount`).should('contain', price1); //for 3 oranges
     });
 
     
   })
-
-  
-
-
-    // cy.get('@quantityInput20').clear().type('3'); //testing to see if that's right
-    // cy.get('@decrementLink20').click();
-    // cy.get('@incrementLink21').click();
-
-   
-
-
-    // // US 1
-
-    // cy.get('@addToCartButton3').click();
-
-    // cy.get('@addToCartButton4').click();
-
-    // // // to check cart
-    // cy.get('.cart-icon').click();
-
-    // cy.get(`.product:nth-child(3) .product-name`).then(($product) =>{
-    //   const text = $product.text();
-    //   cy.get(`.cart-items .cart-item .product-info .product-name`).should('contain', text);
-    // });
-
-    
-    // const text =  cy.get('@productName3');
-    // cy.log(text);
-        // cy.get(`.cart-items .cart-item .product-info .product-name`).should('contain', '$productName3');
-
-   
-    // const text = cy.get('@productName3').text();
-
-
-
   
 })
 

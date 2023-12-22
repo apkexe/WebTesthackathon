@@ -19,14 +19,6 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-
-      - name: Cypress run
-        uses: cypress-io/github-action@v6
-        with:
-          record: true
-        env:
-          # pass GitHub token to detect new build vs re-run build
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       
       - name: Run Cypress tests
         run: npm run cypress:run

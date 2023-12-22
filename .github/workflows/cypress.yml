@@ -8,12 +8,15 @@ on:
 jobs:
   cypress:
     runs-on: ubuntu-latest
+    env:
+      CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
       
       - name: Cypress GitHub Action
         uses: cypress-io/github-action@v2
+      
 
       - name: Set up Node.js
         uses: actions/setup-node@v3

@@ -17,24 +17,49 @@ describe('template spec', () => {
       cy.get(`.product:nth-child(${i}) .stepper-input a.increment`).as(increment);
     }
   })
-  it('passes', () => {
-    cy.visit('https://rahulshettyacademy.com/seleniumPractise/#/')
-
-    // cy.get('.product:nth-child(2) .product-action button').click();
-
-    cy.get('.product:first .product-action button').as('firstAddToCartButton');
-
-    cy.get('@firstAddToCartButton').click();
-
-
-
+  
+  it('US1_1', () => {
+    
 
     cy.get('@addToCartButton3').click();
-    cy.get('@quantityInput20').clear().type('3'); //testing to see if that's right
-    cy.get('@decrementLink20').click();
-    cy.get('@incrementLink21').click();
+
+  })
+
+  it('US1_2', () => {
+    
+    
+      cy.get('@addToCartButton1').click();
+      cy.get('@addToCartButton12').click();
+      cy.get('@addToCartButton13').click();
+      cy.get('@addToCartButton14').click();
+    
+    
+    
     
   })
+
+
+  it('US1_3', () => {
+
+    cy.get('@quantityInput20').clear().type('3');
+    
+    cy.get('@addToCartButton20').click();
+    
+
+    // // to check cart
+    cy.get('.cart-icon').click();
+
+    //this is for product name
+    cy.get(`.product:nth-child(20) .product-name`).then(($product) =>{
+      const text = $product.text();
+      cy.get(`.cart-items .cart-item .product-info .product-name`).should('contain', text);
+    });
+
+    //this is for product price
+    cy.get(`.product:nth-child(20) .product-price`).then(($product) =>{
+      const text = $product.text();
+      cy.get(`.cart-items .cart-item .product-info .product-price`).should('contain', text);
+    });
 
 
 

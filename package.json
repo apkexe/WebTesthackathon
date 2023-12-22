@@ -6,7 +6,7 @@
   "scripts": {
     "prestart": "npm install",
     "start": "my-server -p 3030",
-    "cy:run": "cypress run",
+    "cypress:run": "cypress run",
     "cy:ci": "START_SERVER_AND_TEST_INSECURE=1 start-server-and-test start https-get://localhost:3030 cy:run"
   },
   "author": "",

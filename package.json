@@ -1,12 +1,12 @@
 {
   "name": "cypresstest",
   "version": "1.0.0",
-  "description": "",
+  "description": "Hackathon 2023 NWO Control",
   "main": "index.js",
   "scripts": {
+    "prestart": "npm install",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "start": "npx cypress open",
   },
   "author": "",
   "license": "ISC",

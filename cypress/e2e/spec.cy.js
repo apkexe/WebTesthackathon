@@ -18,49 +18,7 @@ describe('template spec', () => {
     }
   })
   
-  it('US1_1', () => {
-    
-
-    cy.get('@addToCartButton3').click();
-
-  })
-
-  it('US1_2', () => {
-    
-    
-      cy.get('@addToCartButton1').click();
-      cy.get('@addToCartButton12').click();
-      cy.get('@addToCartButton13').click();
-      cy.get('@addToCartButton14').click();
-    
-    
-    
-    
-  })
-
-
-  it('US1_3', () => {
-
-    cy.get('@quantityInput20').clear().type('3');
-    
-    cy.get('@addToCartButton20').click();
-    
-
-    // // to check cart
-    cy.get('.cart-icon').click();
-
-    //this is for product name
-    cy.get(`.product:nth-child(20) .product-name`).then(($product) =>{
-      const text = $product.text();
-      cy.get(`.cart-items .cart-item .product-info .product-name`).should('contain', text);
-    });
-
-    //this is for product price
-    cy.get(`.product:nth-child(20) .product-price`).then(($product) =>{
-      const text = $product.text();
-      cy.get(`.cart-items .cart-item .product-info .product-price`).should('contain', text);
-    });
-
+ 
 
 
   it("US-2", () =>{

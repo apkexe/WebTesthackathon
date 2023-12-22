@@ -1,9 +1,10 @@
 {
-  "name": "hackathon",
+  "name": "cypresstest",
   "version": "1.0.0",
-  "description": "Repository created for Software Engineering 2 WebTest Christmas Hackathon.\r We tested the UI of a dummy [website](https://rahulshettyacademy.com/seleniumPractise/#/)",
+  "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "cypress:open": "cypress open",
     "cypress:run": "npx cypress run"
   },

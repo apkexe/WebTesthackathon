@@ -8,8 +8,6 @@ on:
 jobs:
   cypress:
     runs-on: ubuntu-latest
-    env:
-      CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2      
@@ -23,4 +21,4 @@ jobs:
         run: npm install
 
       - name: Run Cypress tests
-        run: npm run cypress:run --record --key $CYPRESS_RECORD_KEY
+        run: npm run cypress:run
